@@ -1,0 +1,8 @@
+useDynLib(truncgof)
+
+export(cdens, dplot, qplot, edf, ad2up.test, adup.test, v.test,
+ad2.test, ad.test, ks.test, w2.test)
+
+S3method(print, mchtest)
+
+
