@@ -3,7 +3,7 @@ function (x, distn, fit, H = NA,
     alternative = c("two.sided", "less", "greater"), sim = 100, tol = 1e-04, estfun = NA) 
 {
     if (!is.function(try(get(distn), silent = TRUE)))
-       stop("'distn' must be a character of a distribution function")
+       stop("'distn' must be a character string of a distribution function")
     if (is.na(H)) H <- -Inf
     est <- try(eval(parse(text = estfun)), silent = TRUE)    
     if (!is.na(est[1])) {
@@ -12,7 +12,7 @@ function (x, distn, fit, H = NA,
         if (!is.vector(est) || !is.list(est))
             stop("value of 'estfun' is not a vector of 'mode(list)'")
         if (!all(names(est) %in% names(formals(distn))))
-            stop("names of 'estfun' value dosn't match arguments in 'distn'")
+            stop("values of 'estfun' dosn't match arguments in 'distn'")
     }
     adup.p <- function(n, zH, z, j) sqrt(n)*max((zH + j/n*(1-zH) - z)/(1-z))
     adup.m <- function(n, zH, z, j) sqrt(n)*max((z - zH - (j-1)/n * (1-zH))/(1-z))

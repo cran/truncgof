@@ -1,0 +1,5 @@
+changes in version 5.0-1
+------------------------
+- some spelling adjustments
+- Crámer-von Mises test is now 'Cramer-von Mises test' 
+  (Portable packages must use only ASCII characters in their R code ...)

@@ -52,7 +52,7 @@ for left-truncated loss samples}, Tech. rep., University of Calivornia Santa Bar
 
 \seealso{\code{\link{ks.test}}, \code{\link{v.test}}, \code{\link{ad.test}}
 for supremum class tests and \code{\link{ad2.test}}, \code{\link{w2.test}}
-for other quadratic class tests. For more details see \code{mctest}. 
+for other quadratic class tests. For more details see \code{\link{mctest}}. 
 }
 \examples{
 set.seed(123)

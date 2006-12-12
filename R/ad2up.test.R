@@ -2,7 +2,7 @@
 function (x, distn, fit, H = NA, sim = 100, tol = 1e-04, estfun = NA)
 {
     if (!is.function(try(get(distn), silent = TRUE)))
-       stop("'distn' must be a character of a distribution function")
+       stop("'distn' must be a character string of a distribution function")
     if (is.na(H)) H <- -Inf
     est <- try(eval(parse(text = estfun)), silent = TRUE)    
     if (!is.na(est[1])) {
@@ -11,7 +11,7 @@ function (x, distn, fit, H = NA, sim = 100, tol = 1e-04, estfun = NA)
         if (!is.vector(est) || !is.list(est))
             stop("value of 'estfun' is not a vector of 'mode(list)'")
         if (!all(names(est) %in% names(formals(distn))))
-            stop("names of 'estfun' value dosn't match arguments in 'distn'")
+            stop("values of 'estfun' dosn't match arguments in 'distn'")
     }
     ad2up <- function(n, zH, z, j)
              -2*n*log(1-zH) + 2*sum(log(1-z)) + (1-zH)/n * sum((1+2*(n-j))/(1-z))
