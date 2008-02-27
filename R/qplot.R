@@ -1,6 +1,6 @@
 "qplot" <-
 function(x, distn, parm, H = NA, plot.it = TRUE, main = "QQ-Plot", 
-    xlab = "empirical quantiles", ylab = "theoretical quantils", ...) 
+    xlab = "empirical quantiles", ylab = "theoretical quantiles", ...) 
 {
     if (!is.function(try(get(distn), silent = TRUE)))
        stop("'distn' must be a character of a distribution function")

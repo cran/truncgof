@@ -1,8 +1,8 @@
 \name{w2.test}
 \alias{w2.test}
 
-\title{Cramér-von Mise test}
-\description{Cramér-von Mise test providing a comparison of a fitted distribution
+\title{Cram/'er-von Mises test}
+\description{Cram/'er-von Mises test providing a comparison of a fitted distribution
 with the empirical distribution.
 }
 \usage{
@@ -21,7 +21,7 @@ w2.test(x, distn, fit, H = NA, sim = 100, tol = 1e-04, estfun = NA)
 }
 
 \details{
-The Cramér-von Mies test compares the null distribution with the empirical distribution
+The Cram/'er-von Mies test compares the null distribution with the empirical distribution
 function of the observed data, where left truncated data samples are allowed.
 The test statistic is given by
 \deqn{W^2 = \frac{n}{3} + \frac{n z_H}{1-z_H} +
@@ -34,11 +34,11 @@ z_j=F_theta(x_j)}, where \eqn{x_1, \dots, x_n} are the ordered data values. Here
 
 \value{
 A list with class "mchtest" containing the following components
-  \item{statistic}{the value of the Cramér-von Mies statistic}
+  \item{statistic}{the value of the Cram\'er-von Mies statistic}
   \item{treshold}{the treshold value}
   \item{p.value}{the p-value of the test}
   \item{data.name}{a character string giving the name of the data}
-  \item{method}{the character string "Cramer-von Mies test"}
+  \item{method}{the character string "Cramer-von Mises test"}
   \item{sim.no}{number of simulated szenarios in the Monte-Carlo simulation}
 }
 \references{Chernobay, A., Rachev, S., Fabozzi, F. (2005), \emph{Composites goodness-of-fit tests

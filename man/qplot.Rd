@@ -6,7 +6,7 @@
 }
 \usage{
 qplot(x, distn, parm, H = NA, plot.it = TRUE, main = "QQ-Plot", 
-      xlab = "empirical quantiles", ylab = "theoretical quantils", ...)
+      xlab = "empirical quantiles", ylab = "theoretical quantiles", ...)
 }
 
 \arguments{
