@@ -30,6 +30,7 @@ can be a numeric value or numeric vector, but must be greater or equal to \code{
 
 \seealso{density functions, e.g. \code{\link{dlnorm}}, \code{\link{dgamma}}, etc.}
 \examples{
+require(MASS)
 set.seed(123)
 treshold <- 10
 xc  <- rlnorm(100, 2, 2)   # complete sample
@@ -40,13 +41,13 @@ args(clnorm)
 
 # mle fitting based on the complete sample
 start <- list(meanlog = 2, sdlog = 1)
-MASS::fitdistr(xc, dlnorm, start = start)
+fitdistr(xc, dlnorm, start = start)
 
 # mle fitting based on the truncated sample
-MASS::fitdistr(xt, clnorm, start = start)
+fitdistr(xt, clnorm, start = start)
 
 # in contrast
-MASS::fitdistr(xt, dlnorm, start = start)
+fitdistr(xt, dlnorm, start = start)
 }
 
 \keyword{distribution}
